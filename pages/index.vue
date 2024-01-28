@@ -15,12 +15,18 @@ const open = () => {
     },
   })
 }
+
+const apiClick = async () => {
+  const { data } = await useFetch('/api/hello')
+  console.log(data.value.text)
+}
 </script>
 
 <template>
   <div>
     <Demo />
     <span @click="open">wel</span>
+    <div @click="apiClick">api</div>
   </div>
 </template>
 
