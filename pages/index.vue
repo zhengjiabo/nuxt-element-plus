@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { ElMessage, ElMessageBox } from 'element-plus'
 import type { Action } from 'element-plus'
-
 const open = () => {
   ElMessageBox.alert('This is a message', 'Title', {
     // if you want to disable its autofocus
@@ -18,7 +17,7 @@ const open = () => {
 
 const apiClick = async () => {
   const { data } = await useFetch('/api/hello')
-  console.log(data.value.text)
+  console.log(data.value?.text)
 }
 </script>
 
